@@ -75,12 +75,19 @@
           </button>
         </div>
         <div data-backdrop class="backdrop is-hidden">
+          <!-- ДОБАВЬ КЛАСС IS-HIDDEN-->
           <div class="modal">
-            <button data-close-modal class="close-btn">
-              <svg class="svg-img" width="30px" height="30px">
-                <use href="./images/studio/sprite.svg#close"></use>
-              </svg>
-            </button>
+            <div class="btn-div">
+              <button data-close-modal class="close-btn">
+                <svg class="svg-img" width="11px" height="11px">
+                  <use href="./images/studio/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+
+            <p class="text">Оставьте свои данные, мы вам перезвоним</p>
+
+            <button class="send-btn">Отправить</button>
           </div>
         </div>
       </section>
@@ -556,7 +563,7 @@
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
 
-    <script>
+    <!-- <script>
       const refs = {
         openModalBtn: document.querySelector("[data-open-modal]"),
         closeModalBtn: document.querySelector("[data-close-modal]"),
@@ -575,6 +582,6 @@
       function logBackdropClick() {
         console.log("Это клик в бекдроп");
       }
-    </script>
+    </script> -->
   </body>
 </html>

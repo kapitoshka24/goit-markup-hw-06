@@ -124,7 +124,7 @@
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--white);
-  background-color: var(--blue);
+  background-color: rgba(33, 150, 243, 0.9);
   text-decoration: none;
 }
 .products .item:hover .overlay .text,

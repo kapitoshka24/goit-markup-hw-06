@@ -202,6 +202,7 @@ p {
 }
 .modal {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   min-width: 528px;
@@ -212,22 +213,58 @@ p {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.modal .svg-img {
+  padding: 6px;
+  width: 30px;
+  height: 30px;
+}
+.modal .btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal .close-btn {
+  display: flex;
+  text-align: end;
   background-color: var(--white);
-
   outline: none;
   padding: 0;
   border-radius: 50%;
-  border-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
-  margin-left: 490px;
   cursor: pointer;
 }
 .close-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  fill: var(--blue);
+}
+.modal > .text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal > .send-btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  min-width: 200px;
+  padding: 10px 55px;
+  outline: none;
+  cursor: pointer;
+
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 .advantages {
   display: flex;
