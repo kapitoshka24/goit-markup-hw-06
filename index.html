@@ -75,7 +75,6 @@
           </button>
         </div>
         <div data-backdrop class="backdrop is-hidden">
-          <!-- ДОБАВЬ КЛАСС IS-HIDDEN-->
           <div class="modal">
             <div class="btn-div">
               <button data-close-modal class="close-btn">
@@ -86,29 +85,78 @@
             </div>
             <p class="text">Оставьте свои данные, мы вам перезвоним</p>
             <form class="form js-speaker-form">
-              <label for="name">Имя</label>
-              <input type="text" name="name" id="name" />
-              <br />
-              <label for="tel">Телефон</label>
-              <input type="tel" name="tel" id="tel" />
-              <br />
-              <label for="email">Почта</label>
-              <input type="email" name="email" id="email" />
-              <br />
+              <label class="form-field">
+                <span class="form-label">Имя</span>
+                <div class="wrapper">
+                  <input
+                    class="form-input"
+                    placeholder=" "
+                    type="text"
+                    name="name"
+                  />
+                  <svg class="svg-img" width="18px" height="18px">
+                    <use href="./images/studio/sprite.svg#person"></use>
+                  </svg>
+                </div>
+              </label>
 
-              <label for="comment">Комментарий</label>
-              <textarea
-                name="comment"
-                id="comment"
-                cols="30"
-                rows="10"
-              ></textarea>
-              <br />
-              <input type="checkbox" name="policy" id="policy" value="policy" />
-              <label for="policy"
-                >Соглашаюсь с рассылкой и принимаю
-                <span class="contract">Условия договора</span></label
-              >
+              <label class="form-field">
+                <span class="form-label">Телефон</span>
+
+                <div class="wrapper">
+                  <input
+                    class="form-input"
+                    placeholder=""
+                    type="tel"
+                    name="tel"
+                  />
+                  <svg class="svg-img" width="18px" height="18px">
+                    <use href="./images/studio/sprite.svg#phone"></use>
+                  </svg>
+                </div>
+              </label>
+
+              <label class="form-field">
+                <span class="form-label" for="email">Почта</span>
+                <div class="wrapper">
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder=" "
+                  />
+                  <svg class="svg-img" width="18px" height="18px">
+                    <use href="./images/studio/sprite.svg#email-black"></use>
+                  </svg>
+                </div>
+              </label>
+
+              <label class="form-field">
+                <span class="form-label">Комментарий</span>
+                <textarea
+                  name="comment"
+                  placeholder="Введите текст"
+                  class="form-input textarea"
+                ></textarea>
+              </label>
+
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  name="policy"
+                  value="policy"
+                  class="checkbox-input"
+                />
+                <div class="wrapper">
+                  <span class="checkbox-item"></span>
+                  <span for="policy" class="checkbox-label"
+                    >Соглашаюсь с рассылкой и принимаю
+                    <a href="" class="contract">Условия договора</a></span
+                  >
+                </div>
+              </label>
+
               <button type="submit" class="send-btn">Отправить</button>
             </form>
           </div>
@@ -574,6 +622,25 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="sign-up">
+          <h2 class="title">подпишитесь на рассылку</h2>
+          <form class="form-2 js-speaker-form">
+            <label class="form-field">
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </label>
+            <div class="wrapper">
+              <button type="submit" class="send-btn">Подписаться</button>
+              <svg class="svg-img" width="24px" height="24px">
+                <use href="./images/studio/sprite.svg#telegram"></use>
+              </svg>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
