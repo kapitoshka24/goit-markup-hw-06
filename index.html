@@ -84,10 +84,33 @@
                 </svg>
               </button>
             </div>
-
             <p class="text">Оставьте свои данные, мы вам перезвоним</p>
+            <form class="form js-speaker-form">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" />
+              <br />
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" />
+              <br />
+              <label for="email">Почта</label>
+              <input type="email" name="email" id="email" />
+              <br />
 
-            <button class="send-btn">Отправить</button>
+              <label for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <br />
+              <input type="checkbox" name="policy" id="policy" value="policy" />
+              <label for="policy"
+                >Соглашаюсь с рассылкой и принимаю
+                <span class="contract">Условия договора</span></label
+              >
+              <button type="submit" class="send-btn">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
@@ -555,6 +578,7 @@
       </div>
     </footer>
 
+    <!-- закрепляет хедер сверху страницы и добавляет паддинг по размеру хедера -->
     <script>
       const { height: pageHeaderHeight } = document
         .querySelector(".main-nav")
@@ -563,7 +587,8 @@
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
 
-    <!-- <script>
+    <!-- открывает и закрывает модальное окно -->
+    <script>
       const refs = {
         openModalBtn: document.querySelector("[data-open-modal]"),
         closeModalBtn: document.querySelector("[data-close-modal]"),
@@ -582,6 +607,23 @@
       function logBackdropClick() {
         console.log("Это клик в бекдроп");
       }
-    </script> -->
+    </script>
+
+    <!-- сабмитит форму -->
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
